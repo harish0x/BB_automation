@@ -54,7 +54,7 @@ echo "[*] Running nuclei for vulnerability scanning..."
 ./go/bin/nuclei -list $alive_subdomains_file -t ~/nuclei-templates/
 ./go/bin/nuclei -list $alive_subdomains_file -tags cves,osint,tech
 cat $all_urls_file | gf lfi | ./go/bin/nuclei -tags lfi
-cat $all_urls_file | gf redirect | openredirex -p ~/openRedirect
+#cat $all_urls_file | gf redirect | openredirex -p ~/openRedirect
 
 # Generate final report
 echo "[*] Generating final report..."
